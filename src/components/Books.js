@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook, removeBook } from '../redux/books/books';
+import { addBook, removeBook } from '../redux/books/book';
 
 export default function Books() {
   const dispatch = useDispatch();
