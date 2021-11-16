@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBook, removeBook } from '../redux/books/books';
 
 export default function Books() {
   const dispatch = useDispatch();
@@ -18,12 +18,16 @@ export default function Books() {
     dispatch(addBook(newBook));
   };
 
+  const removeBookFromStore = (e) => {
+    dispatch(removeBook(e.target.id));
+  };
+
   const booksArray = useSelector((state) => state.booksReducer);
   const listItems = booksArray.map((book) => (
     <div key={book.id}>
       <p key={book.title}>{book.title}</p>
       <p key={book.author}>{book.author}</p>
-      <button type="button">Remove Book</button>
+      <button type="button" id={book.id} onClick={removeBookFromStore}>Remove Book</button>
     </div>
   ));
 
