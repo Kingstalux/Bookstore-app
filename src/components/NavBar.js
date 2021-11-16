@@ -10,10 +10,10 @@ const NavBar = () => (
       <div>
         <ul>
           <li>
-            <NavLink to="/" activeClassName="active">Books</NavLink>
+            <NavLink to="/" activeclassname="active">Books</NavLink>
           </li>
           <li>
-            <NavLink to="/categories" activeClassName="active">Categories</NavLink>
+            <NavLink to="/categories" activeclassname="active">Categories</NavLink>
           </li>
         </ul>
       </div>

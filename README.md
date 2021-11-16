@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Next, I structured the application files using a "feature folder" approach and using the ducks pattern for my Redux files. I then setup react router for the app navigation. The app has two pages; the books page and the categories page.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Next, I structured the application files using a "feature folder" approach and using the ducks pattern for my Redux files. I then setup react router for the app navigation. The app has two pages; the books page and the categories page. In the next step, I configured my Redux Store and wrote actions and reducer for adding and removing books. I also added some UI elements to my components and made them dispatch actions.
 
 ## Available Scripts
 
