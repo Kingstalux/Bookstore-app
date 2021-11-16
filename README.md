@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Next, I structured the application files using a "feature folder" approach and using the ducks pattern for my Redux files. I then setup react router for the app navigation. The app has two pages; the books page and the categories page.
 
 ## Available Scripts
 
@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors
+
+👤 **Ngu Kingsely**
+
+- GitHub: [@Kingstalux](https://github.com/Kingstalux)
+- Twitter: [@NguKingsley](https://twitter.com/NguKingsley)
+- LinkedIn: [Ngu Kingsely](https://www.linkedin.com/in/ngu-kingsely-junior-cho-974b60136/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Kingstalux/Maths-magicians/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
