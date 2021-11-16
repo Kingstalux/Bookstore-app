@@ -5,9 +5,10 @@ const Books = () => (
     <div className="book-list" />
     <br />
     <form>
-      <input placeholder="book title" />
+      <h2>ADD NEW BOOK</h2>
+      <input placeholder="Book title" />
       <br />
-      <input placeholder="book author" />
+      <input placeholder="Category" />
       <br />
       <button type="submit">Add Book</button>
     </form>
