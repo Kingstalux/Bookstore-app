@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { fetchBooks } from '../redux/books/bookApi';
+import { fetchBooks, deleteBooksApi } from '../redux/books/book';
 
 export default function Books() {
   const dispatch = useDispatch();
 
-  const ApiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/kx1umiDgY4OqWMAejDcI/books';
+  const ApiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/j8JmvxHKftHERHKD19Nl/books/';
 
   const getItems = () => {
     dispatch(fetchBooks());
@@ -39,16 +39,16 @@ export default function Books() {
     document.querySelector('.author').value = '';
   };
 
-  //   const removeBookFromStore = (e) => {
-  //     dispatch(removeBook(e.target.id));
-  //   };
+  const removeBookFromStore = (e) => {
+    dispatch(deleteBooksApi(e.target.id));
+  };
 
   const booksArray = useSelector((state) => state.booksReducer.books);
   const listItems = Object.keys(booksArray).map((book) => (
     <div key={book}>
       <p>{booksArray[book][0].title}</p>
       <p>{booksArray[book][0].category}</p>
-      <button type="button" id={book}>Remove Book</button>
+      <button type="button" id={book} onClick={removeBookFromStore}>Remove Book</button>
     </div>
   ));
 
@@ -67,8 +67,3 @@ export default function Books() {
     </div>
   );
 }
-//  kx1umiDgY4OqWMAejDcI
-//  j8JmvxHKftHERHKD19Nl
-//  axkKiNTc0BlcvlvnQO6f
-//  TfnISTIUlc2jqorlqZNb
-//  SOEUq8Bu7DF5kK8jIXTi
