@@ -1,33 +1,54 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook, removeBook } from '../redux/books/book';
+import { fetchBooks, deleteBooksApi } from '../redux/books/book';
 
 export default function Books() {
   const dispatch = useDispatch();
 
+  const ApiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/j8JmvxHKftHERHKD19Nl/books/';
+
+  const getItems = () => {
+    dispatch(fetchBooks());
+  };
+
+  useEffect(() => {
+    getItems();
+  }, []);
+
   const submitBookToStore = (e) => {
     e.preventDefault();
-    const newBook = {
-      id: uuidv4(),
-      title: document.querySelector('.title').value,
-      author: document.querySelector('.author').value,
-    };
+    fetch(ApiUrl, {
+      method: 'post',
+      body: JSON.stringify({
+        item_id: uuidv4(),
+        title: document.querySelector('.title').value,
+        category: document.querySelector('.author').value,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.text())
+      .then((json) => {
+        if (json) {
+          getItems();
+        }
+      });
     document.querySelector('.title').value = '';
     document.querySelector('.author').value = '';
-    dispatch(addBook(newBook));
   };
 
   const removeBookFromStore = (e) => {
-    dispatch(removeBook(e.target.id));
+    dispatch(deleteBooksApi(e.target.id));
   };
 
-  const booksArray = useSelector((state) => state.booksReducer);
-  const listItems = booksArray.map((book) => (
-    <div key={book.id}>
-      <p key={book.title}>{book.title}</p>
-      <p key={book.author}>{book.author}</p>
-      <button type="button" id={book.id} onClick={removeBookFromStore}>Remove Book</button>
+  const booksArray = useSelector((state) => state.booksReducer.books);
+  const listItems = Object.keys(booksArray).map((book) => (
+    <div key={book}>
+      <p>{booksArray[book][0].title}</p>
+      <p>{booksArray[book][0].category}</p>
+      <button type="button" id={book} onClick={removeBookFromStore}>Remove Book</button>
     </div>
   ));
 
@@ -39,7 +60,7 @@ export default function Books() {
         <h2>ADD NEW BOOK</h2>
         <input placeholder="Book title" className="title" />
         <br />
-        <input placeholder="Book author" className="author" />
+        <input placeholder="Category" className="author" />
         <br />
         <button type="submit" onClick={submitBookToStore}>Add Book</button>
       </form>
