@@ -46,9 +46,28 @@ export default function Books() {
   const booksArray = useSelector((state) => state.booksReducer.books);
   const listItems = Object.keys(booksArray).map((book) => (
     <div key={book}>
-      <p>{booksArray[book][0].title}</p>
-      <p>{booksArray[book][0].category}</p>
-      <button type="button" id={book} onClick={removeBookFromStore}>Remove Book</button>
+      <div className="list">
+        <p className="action">Action</p>
+        <p>{booksArray[book][0].title}</p>
+        <p>{booksArray[book][0].category}</p>
+        <div className="btn-div">
+          <button type="button" className="comment btn">Comment</button>
+          <button type="button" id={book} className="remove btn" onClick={removeBookFromStore}>Remove</button>
+          <button type="button" className="edit btn">Edit</button>
+        </div>
+      </div>
+      <div className="percentage">
+        <p className="circle">ICON</p>
+        <div className="middle">
+          <p className="number">0%</p>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
+      <div className="progress">
+        <p className="current">CURRENT CHAPTER</p>
+        <p className="chapter">Prologue</p>
+        <button type="button" className="progress-btn">UPDATE PROGRESS</button>
+      </div>
     </div>
   ));
 
@@ -59,9 +78,7 @@ export default function Books() {
       <form>
         <h2>ADD NEW BOOK</h2>
         <input placeholder="Book title" className="title" />
-        <br />
         <input placeholder="Category" className="author" />
-        <br />
         <button type="submit" onClick={submitBookToStore}>Add Book</button>
       </form>
     </div>
