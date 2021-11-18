@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { FaRegCircle } from 'react-icons/fa';
 import { fetchBooks, deleteBooksApi } from '../redux/books/book';
 
 export default function Books() {
@@ -57,7 +58,7 @@ export default function Books() {
         </div>
       </div>
       <div className="percentage">
-        <p className="circle">ICON</p>
+        <p className="circle"><FaRegCircle /></p>
         <div className="middle">
           <p className="number">0%</p>
           <p className="completed">Completed</p>

@@ -221,11 +221,6 @@ p.book-author {
   display: flex;
 }
 
-.circle {
-  justify-self: center;
-  align-self: center;
-}
-
 .percentage p,
 div.progress {
   background-color: white;
@@ -266,4 +261,17 @@ p.chapter {
 .edit:hover,
 .comment:hover {
   cursor: pointer;
+}
+
+.icon svg {
+  color: #0290ff;
+  font-size: 2.249rem;
+  background-color: white;
+}
+
+.circle svg {
+  color: #0290ff;
+  font-size: 4.25rem;
+  background-color: white;
+  margin-top: 3rem;
 }
