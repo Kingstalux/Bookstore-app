@@ -156,3 +156,114 @@ input.author {
   padding-inline: 6.25rem;
   max-width: 75rem;
 }
+
+.card {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  margin-bottom: 0.938rem;
+}
+
+.list {
+  height: 10.625rem;
+  margin-bottom: 0.938rem;
+  padding-left: 1.688rem;
+  padding-bottom: 1.75rem;
+  padding-top: 2rem;
+}
+
+div.list,
+div.btn-div,
+div.percentage,
+div.card {
+  background-color: white;
+}
+
+p.action {
+  font-size: 1.125rem;
+  background-color: white;
+  color: #c9c9c9;
+  margin-bottom: 0.25rem;
+}
+
+p.title {
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+  font-size: 1.813rem;
+}
+
+p.author {
+  background-color: white;
+  color: #0290ff;
+  font-size: 1.188rem;
+  margin-bottom: 1.313rem;
+}
+
+.btn {
+  color: #0290ff;
+  background-color: white;
+  border: none;
+  font-size: 1.188rem;
+  padding-inline: 1.063rem;
+}
+
+.comment {
+  padding-left: 0;
+  border-right: 1px solid #969696;
+}
+
+.remove {
+  border-right: 1px solid #969696;
+}
+
+.percentage {
+  display: flex;
+}
+
+.circle {
+  justify-self: center;
+  align-self: center;
+}
+
+.percentage p,
+div.progress {
+  background-color: white;
+}
+
+p.number {
+  font-size: 2.438rem;
+  padding-top: 3.188rem;
+}
+
+p.completed {
+  font-size: 1.125rem;
+  color: #888;
+}
+
+div.middle {
+  margin-left: 0.688rem;
+  padding-bottom: 3.875rem;
+  background-color: white;
+}
+
+p.current {
+  font-size: 1.125rem;
+  color: #888;
+  background-color: white;
+  margin-top: 2.063rem;
+  margin-bottom: 0.438rem;
+}
+
+p.chapter {
+  background-color: white;
+  color: black;
+  font-size: 1.313rem;
+  margin-bottom: 1.438rem;
+}
+
+.remove:hover,
+.edit:hover,
+.comment:hover {
+  cursor: pointer;
+}
