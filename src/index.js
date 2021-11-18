@@ -5,6 +5,7 @@ import './index.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from './redux/configureStore';
 import App from './App';
+import '@fontsource/roboto-slab';
 
 ReactDOM.render(
   <React.StrictMode>

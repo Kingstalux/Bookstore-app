@@ -64,6 +64,7 @@ export default function Books() {
           <p className="completed">Completed</p>
         </div>
       </div>
+      <span className="span" />
       <div className="progress">
         <p className="current">CURRENT CHAPTER</p>
         <p className="chapter">Prologue</p>
