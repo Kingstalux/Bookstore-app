@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { FaRegCircle } from 'react-icons/fa';
 import { fetchBooks, deleteBooksApi } from '../redux/books/book';
 
 export default function Books() {
@@ -45,24 +46,43 @@ export default function Books() {
 
   const booksArray = useSelector((state) => state.booksReducer.books);
   const listItems = Object.keys(booksArray).map((book) => (
-    <div key={book}>
-      <p>{booksArray[book][0].title}</p>
-      <p>{booksArray[book][0].category}</p>
-      <button type="button" id={book} onClick={removeBookFromStore}>Remove Book</button>
+    <div key={book} className="card">
+      <div className="list">
+        <p className="action">Action</p>
+        <p className="book-title">{booksArray[book][0].title}</p>
+        <p className="book-author">{booksArray[book][0].category}</p>
+        <div className="btn-div">
+          <button type="button" className="comment btn">Comment</button>
+          <button type="button" id={book} className="remove btn" onClick={removeBookFromStore}>Remove</button>
+          <button type="button" className="edit btn">Edit</button>
+        </div>
+      </div>
+      <div className="percentage">
+        <p className="circle"><FaRegCircle /></p>
+        <div className="middle">
+          <p className="number">0%</p>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
+      <span className="span" />
+      <div className="progress">
+        <p className="current">CURRENT CHAPTER</p>
+        <p className="chapter">Prologue</p>
+        <button type="button" className="progress-btn">UPDATE PROGRESS</button>
+      </div>
     </div>
   ));
 
   return (
-    <div>
+    <div className="book-div">
       <div className="book-list">{listItems}</div>
       <br />
-      <form>
+      <div className="hr"><hr /></div>
+      <form className="form">
         <h2>ADD NEW BOOK</h2>
         <input placeholder="Book title" className="title" />
-        <br />
         <input placeholder="Category" className="author" />
-        <br />
-        <button type="submit" onClick={submitBookToStore}>Add Book</button>
+        <button type="submit" onClick={submitBookToStore} className="add-btn">Add Book</button>
       </form>
     </div>
   );

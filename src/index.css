@@ -1,3 +1,367 @@
 * {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f3f7;
+  font-family: sans-serif, 'Roboto Slab';
+}
+
+.app {
+  box-sizing: border-box;
+  margin: 9.313rem 6.25rem 11.75rem 6.25rem;
+  max-width: 87.5rem;
+}
+
+.app div,
+.app,
+.book-div,
+.form,
+.form h2 {
+  background-color: #fafafa;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  padding-left: 2.563rem;
+  height: 1rem;
+  font-family: sans-serif, 'Montserrat';
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.books > a.active,
+.categories > a.active {
+  color: #585858;
+}
+
+.nav div,
+.nav {
+  height: 5.875rem;
+  background-color: white;
+}
+
+.logo,
+.icon,
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo p,
+.icon p,
+.books a,
+.categories a {
+  background-color: white;
+}
+
+.nav {
+  padding-inline: 6.25rem;
+  margin-bottom: 2.313rem;
+}
+
+.logo p {
+  color: #0290ff;
+  font-family: sans-serif, 'Montserrat';
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.hr {
+  padding-inline: 6.25rem;
+  max-width: 75rem;
+  margin-bottom: 1.813rem;
+}
+
+.hr hr {
+  border: 1px solid #969696;
+}
+
+.form {
+  padding-inline: 6.25rem;
+  max-width: 75rem;
+}
+
+.form h2 {
+  font-size: 1.5rem;
+  color: #c9c9c9;
+  font-weight: 900;
+  margin-bottom: 1.188rem;
+}
+
+.form input {
+  margin-right: 2.125rem;
+  background-color: white;
+  border: 1px solid #969696;
+  margin-bottom: 16.563rem;
+  padding-left: 1.063rem;
+  font-size: 1.188rem;
+  color: #969696;
+}
+
+input.title {
+  max-width: 35.688rem;
+  min-width: 25vw;
+  height: 2.813rem;
+}
+
+input.author {
+  max-width: 17.813rem;
+  height: 2.813rem;
+}
+
+.add-btn {
+  width: 11.5rem;
+  height: 2.813rem;
+  color: white;
+  background-color: #4386bf;
+  border: none;
+  font-size: 1.125rem;
+}
+
+.progress-btn {
+  background-color: #0290ff;
+  border: none;
+  padding-left: 1.375rem;
+  padding-right: 1.188rem;
+  width: 11.5rem;
+  height: 2.063rem;
+  font-family: sans-serif, 'Roboto Slab';
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.add-btn:hover,
+.progress-btn:hover {
+  color: #4386bf;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid  #4386bf;
+}
+
+.add-btn:active,
+.progress-btn:active {
+  color: white;
+  background-color: #4386bf;
+  cursor: pointer;
+}
+
+.book-list {
+  padding-inline: 6.25rem;
+  max-width: 75rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 40% 20% 5% 30%;
+  margin-bottom: 0.938rem;
+}
+
+.list {
+  height: 10.625rem;
+  margin-bottom: 0.938rem;
+  padding-left: 1.688rem;
+  padding-bottom: 1.75rem;
+  padding-top: 2rem;
+}
+
+div.list,
+div.btn-div,
+div.percentage,
+div.card {
+  background-color: white;
+}
+
+p.action {
+  background-color: white;
+  margin-bottom: 0.25rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-family: sans-serif, 'Montserrat';
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+p.book-title {
+  background-color: white;
+  margin-bottom: 0.25rem;
+  height: 1.813rem;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+p.book-author {
+  background-color: white;
+  margin-bottom: 1.313rem;
+  width: 6.688rem;
+  height: 1.188rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.btn {
+  background-color: white;
+  border: none;
+  padding-inline: 1.063rem;
+  height: 1.188rem;
+  font-family: sans-serif, 'Roboto Slab';
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.comment {
+  padding-left: 0;
+  border-right: 1px solid #969696;
+}
+
+.remove {
+  border-right: 1px solid #969696;
+}
+
+.percentage {
+  display: flex;
+}
+
+.percentage p,
+div.progress {
+  background-color: white;
+}
+
+p.number {
+  padding-top: 3.188rem;
+  height: 2.438rem;
+  font-family: sans-serif, 'Montserrat';
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+p.completed {
+  height: 1.125rem;
+  opacity: 0.5;
+  font-family: sans-serif, 'Montserrat';
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+div.middle {
+  margin-left: 0.688rem;
+  padding-bottom: 3.875rem;
+  background-color: white;
+}
+
+p.current {
+  background-color: white;
+  margin-top: 2.063rem;
+  margin-bottom: 0.438rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+p.chapter {
+  background-color: white;
+  width: 5.625rem;
+  height: 1.313rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.remove:hover,
+.edit:hover,
+.comment:hover {
+  cursor: pointer;
+}
+
+.icon svg {
+  color: #4386bf;
+  font-size: 2.249rem;
+  background-color: white;
+}
+
+.circle svg {
+  color: #4386bf;
+  font-size: 4.25rem;
+  background-color: white;
+  margin-top: 3rem;
+}
+
+.progress {
+  padding-left: 3.688rem;
+}
+
+.span {
+  border-right: solid 1px #e8e8e8;
+  height: 4.375rem;
+  margin-top: 3.125rem;
   background-color: white;
 }
