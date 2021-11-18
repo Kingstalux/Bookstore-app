@@ -45,11 +45,11 @@ export default function Books() {
 
   const booksArray = useSelector((state) => state.booksReducer.books);
   const listItems = Object.keys(booksArray).map((book) => (
-    <div key={book}>
+    <div key={book} className="card">
       <div className="list">
         <p className="action">Action</p>
-        <p>{booksArray[book][0].title}</p>
-        <p>{booksArray[book][0].category}</p>
+        <p className="book-title">{booksArray[book][0].title}</p>
+        <p className="book-author">{booksArray[book][0].category}</p>
         <div className="btn-div">
           <button type="button" className="comment btn">Comment</button>
           <button type="button" id={book} className="remove btn" onClick={removeBookFromStore}>Remove</button>
@@ -76,7 +76,7 @@ export default function Books() {
       <div className="book-list">{listItems}</div>
       <br />
       <div className="hr"><hr /></div>
-      <form>
+      <form className="form">
         <h2>ADD NEW BOOK</h2>
         <input placeholder="Book title" className="title" />
         <input placeholder="Category" className="author" />

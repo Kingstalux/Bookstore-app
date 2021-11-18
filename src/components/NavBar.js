@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => (
   <>
-    <nav className="nav">
+    <nav className="nav flex">
       <div className="sub-nav-1 flex">
         <div className="logo">
           <p>Bookstore CMS</p>

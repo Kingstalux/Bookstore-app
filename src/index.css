@@ -185,7 +185,7 @@ p.action {
   margin-bottom: 0.25rem;
 }
 
-p.title {
+p.book-title {
   background-color: white;
   color: black;
   font-weight: 900;
@@ -193,7 +193,7 @@ p.title {
   font-size: 1.813rem;
 }
 
-p.author {
+p.book-author {
   background-color: white;
   color: #0290ff;
   font-size: 1.188rem;
