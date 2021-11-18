@@ -1,10 +1,13 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Next, I structured the application files using a "feature folder" approach and using the ducks pattern for my Redux files. I then setup react router for the app navigation. The app has two pages; the books page and the categories page. In the next step, I configured my Redux Store and wrote actions and reducer for adding and removing books. I also added some UI elements to my components and made them dispatch actions. In the following milestone of this project, I connected my React-Redux application to an existing API to create and remove books in a remote server. A user can now add or delete a book from the Bookstore API and any changes made persist in the server. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Next, I structured the application files using a "feature folder" approach and using the ducks pattern for my Redux files. I then setup react router for the app navigation. The app has two pages; the books page and the categories page. In the next step, I configured my Redux Store and wrote actions and reducer for adding and removing books. I also added some UI elements to my components and made them dispatch actions. In the following milestone of this project, I connected my React-Redux application to an existing API to create and remove books in a remote server. A user can now add or delete a book from the Bookstore API and any changes made persist in the server. Finally, I added styling to the Bookstore App. I used Zeplin as a collaboration tool while styling the book store app.
 
 ## Preview App
 
 ![Bookstore](./bookstore.jpg)
+
+## Live Page
+[Bookstore-App](https://bookstore-app-kingstalux.herokuapp.com/)
 
 ## Available Scripts
 
