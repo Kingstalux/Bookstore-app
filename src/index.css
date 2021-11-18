@@ -1,3 +1,77 @@
 * {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f3f7;
+}
+
+.app {
+  box-sizing: border-box;
+  margin: 9.313rem 6.25rem 11.75rem 6.25rem;
+  max-width: 87.5rem;
+}
+
+.app div,
+.app,
+.book-div,
+.form,
+.form h2 {
+  background-color: #fafafa;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #969696;
   background-color: white;
+  padding-left: 2.563rem;
+  font-size: 0.937rem;
+}
+
+.books > a.active,
+.categories > a.active {
+  color: #585858;
+}
+
+.nav div,
+.nav {
+  height: 5.875rem;
+  background-color: white;
+}
+
+.logo,
+.icon,
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo p,
+.icon p {
+  background-color: white;
+}
+
+.nav {
+  padding-inline: 6.25rem;
+  margin-bottom: 2.313rem;
+}
+
+.logo p {
+  font-size: 2.249rem;
+  font-weight: 900;
+  color: #0290ff;
 }

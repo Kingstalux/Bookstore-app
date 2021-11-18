@@ -72,14 +72,15 @@ export default function Books() {
   ));
 
   return (
-    <div>
+    <div className="book-div">
       <div className="book-list">{listItems}</div>
       <br />
+      <div className="hr"><hr /></div>
       <form>
         <h2>ADD NEW BOOK</h2>
         <input placeholder="Book title" className="title" />
         <input placeholder="Category" className="author" />
-        <button type="submit" onClick={submitBookToStore}>Add Book</button>
+        <button type="submit" onClick={submitBookToStore} className="add-btn">Add Book</button>
       </form>
     </div>
   );
